@@ -1,149 +1,224 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Deepak Wadhwa - Learning Community</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
 
 <style>
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-    background-color: #000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-  }
 
-  .card {
-    width: 85%;
-    max-width: 340px; 
-    background: #010a0f;
-    border: 1.5px solid #00d2ff;
-    border-radius: 35px;
-    padding: 20px 15px;
-    text-align: center;
-    box-shadow: 0 0 25px rgba(0, 210, 255, 0.15);
-  }
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
 
-  .profile-img {
-    width: 110px;
-    height: 110px;
-    border-radius: 50%;
-    border: 3px solid #00d2ff;
-    object-fit: cover;
-    margin-top: -5px;
-    box-shadow: 0 0 15px #00d2ff;
-  }
+body{
+font-family:'Poppins',sans-serif;
+background:linear-gradient(135deg,#0b6eb8,#18c13d);
+}
 
-  h1 {
-    color: #fff;
-    font-size: 20px;
-    margin: 15px 0;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-  }
+/* Main Container */
 
-  .features {
-    text-align: left;
-    margin: 0 auto;
-    width: 90%;
-  }
+.sio-main-container{
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+padding:20px;
+}
 
-  .feature-item {
-    color: #ccc;
-    font-size: 13px;
-    padding: 10px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    display: flex;
-    align-items: center;
-  }
+/* Card */
 
-  .feature-item:last-child { border-bottom: none; }
+.sio-landing-wrap{
+max-width:520px;
+width:100%;
+text-align:center;
+background:#fff;
+padding:30px 25px;
+border-radius:18px;
+box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
 
-  .icon { margin-right: 12px; font-size: 16px; }
+/* Pulse Animation */
 
-  .join-text {
-    color: #eee;
-    font-size: 12px;
-    margin: 20px 0 12px;
-    font-weight: 300;
-  }
+@keyframes pulse-blue{
+0%{box-shadow:0 0 0 0 rgba(11,110,184,.7)}
+70%{box-shadow:0 0 0 18px rgba(11,110,184,0)}
+100%{box-shadow:0 0 0 0 rgba(11,110,184,0)}
+}
 
-  .telegram-btn {
-    display: block;
-    background: linear-gradient(90deg, #00d2ff 0%, #9247ff 100%);
-    color: white;
-    text-decoration: none;
-    padding: 14px;
-    border-radius: 50px;
-    font-weight: bold;
-    font-size: 16px;
-    margin-bottom: 15px;
-    box-shadow: 0 4px 12px rgba(0, 210, 255, 0.3);
-  }
+/* Button */
 
-  .hindi-quote {
-    color: #bbb;
-    font-size: 13px;
-    margin-bottom: 20px;
-    line-height: 1.4;
-  }
+.sio-btn{
+display:block;
+width:100%;
+background:linear-gradient(45deg,#0b6eb8,#0a8be0);
+color:#fff;
+padding:16px;
+font-size:16px;
+font-weight:700;
+border-radius:50px;
+text-decoration:none;
+margin:15px 0;
+transition:.3s;
+animation:pulse-blue 2s infinite;
+}
 
-  .footer-box {
-    border: 1px solid rgba(0, 210, 255, 0.2);
-    border-radius: 12px;
-    padding: 8px;
-    font-size: 11px;
-    color: #888;
-  }
+.sio-btn:hover{
+transform:scale(1.05);
+background:linear-gradient(45deg,#095c9d,#0b6eb8);
+}
 
-  /* Link styling for Agency */
-  .footer-box a { 
-    color: #00d2ff; 
-    font-weight: bold; 
-    text-decoration: none;
-  }
+/* Profile */
 
-  .disclaimer {
-    font-size: 9px;
-    color: #444;
-    margin-top: 12px;
-  }
+.sio-profile{
+margin:20px 0;
+}
+
+.sio-avatar{
+width:110px;
+height:110px;
+margin:auto;
+border-radius:50%;
+overflow:hidden;
+border:4px solid #fff;
+box-shadow:0 5px 15px rgba(0,0,0,.2);
+}
+
+.sio-avatar img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.sio-headline{
+margin-top:12px;
+font-size:24px;
+font-weight:800;
+color:#18c13d;
+}
+
+/* Features */
+
+.sio-features{
+margin-top:10px;
+}
+
+.sio-feature{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:10px;
+margin:8px 0;
+}
+
+.sio-feature p{
+font-weight:600;
+color:#333;
+}
+
+.sio-tick{
+width:24px;
+height:24px;
+border-radius:50%;
+background:#eaf7ea;
+display:flex;
+align-items:center;
+justify-content:center;
+font-weight:800;
+color:#18c13d;
+font-size:14px;
+}
+
+/* Highlight */
+
+.sio-highlight{
+margin:18px 0;
+padding:10px;
+background:#f1f8ff;
+border-radius:10px;
+font-weight:700;
+color:#0b6eb8;
+}
+
+/* Disclaimer */
+
+.sio-disclaimer{
+margin-top:20px;
+font-size:11px;
+color:#777;
+line-height:1.4;
+}
+
+/* Mobile */
+
+@media(max-width:480px){
+
+.sio-btn{
+font-size:14px;
+padding:14px;
+}
+
+.sio-headline{
+font-size:21px;
+}
+
+.sio-feature p{
+font-size:13px;
+}
+
+}
+
 </style>
-</head>
-<body>
 
-<div class="card">
-  <img src="https://i.ibb.co/FkV61CBG/711752123-122102238423341553-4586529772719677765-n.jpg" alt="Munaaf" class="profile-img">
+<div class="sio-main-container">
 
-  <h1>Munaaf</h1>
+<div class="sio-landing-wrap">
 
-  <div class="features">
-    <div class="feature-item"><span class="icon"></span> Learning & Educational Sessions</div>
-    <div class="feature-item"><span class="icon"></span> Market Concepts & Awareness</div>
-    <div class="feature-item"><span class="icon"></span> Chart Reading Concepts</div>
-    <div class="feature-item"><span class="icon"></span> Educational Case Discussions</div>
-  </div>
+<a class="sio-btn" href="https://t.me/+aJhBU8ncn3djNmE1" target="_blank">
+JOIN TELEGRAM CHANNEL 🚀
+</a>
 
-  <p class="join-text">Join our learning community and grow your knowledge</p>
+<div class="sio-profile">
 
-  <a href="https://t.me/+VQKcLntbMYhjOGJl" class="telegram-btn">JOIN TELEGRAM</a>
-
-  <p class="hindi-quote">     ,     </p>
-
-  <div class="footer-box">
-    This Channel Advertise By <a href="https://t.me/+3XoqJNLxYHswNTc1" target="_blank">AD BUILD AGENCY</a>
-  </div>
-
-  <div class="disclaimer">
-    Terms | Privacy | Disclaimer <br>
-    This site is not part of Facebook� or endorsed by Facebook�.
-  </div>
+<div class="sio-avatar">
+<img src="https://i.ibb.co/KjrBVv9h/mr88-B4-MCQeolto-Xob-M9-JEe-Eyn-ZMn-Bj-FMz-Ac0-SMDAi-h-Ff1-Qg-RBAkl-Xo7yo-Kxe-N-POtqpyfq-Ow-Kv-VPc-Ao-I-I.jpg">
 </div>
 
-</body>
-</html>
+<div class="sio-headline">
+Work From Home Handwriting Job
+</div>
+
+</div>
+
+<div class="sio-features">
+
+<div class="sio-feature">
+<div class="sio-tick">✓</div>
+<p>Simple Writing Work – No Experience Needed</p>
+</div>
+
+<div class="sio-feature">
+<div class="sio-tick">✓</div>
+<p>Earn ₹15,000 – ₹30,000 Per Month</p>
+</div>
+
+<div class="sio-feature">
+<div class="sio-tick">✓</div>
+<p>Work From Home • Flexible Timing</p>
+</div>
+
+<div class="sio-highlight">
+Limited Seats Available – Apply Today! 🚀
+</div>
+
+</div>
+
+<a class="sio-btn" href="https://t.me/+aJhBU8ncn3djNmE1" target="_blank">
+JOIN TELEGRAM CHANNEL 🚀
+</a>
+
+<div class="sio-disclaimer">
+<b style="color:#0a7a3a">Note:</b> This is project-based work. 
+Earnings depend on performance and submission quality.
+</div>
+
+</div>
+
+</div>
